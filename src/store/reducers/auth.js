@@ -19,7 +19,7 @@ const authReducer = (state = initialState, action) => {
             console.log(payload.data)
             return {
                  ...state,
-                ...register,
+                // ...register,
                 statusCode:payload.data.statusCode,
                 message: payload.data.message,
                 // user:  payload.user_details,
@@ -27,13 +27,13 @@ const authReducer = (state = initialState, action) => {
                 // isloggedIn: true,
 
             };
-         case REGISTER:
-            console.log(payload)
-            return {
-                ...state,
-                register: payload.user_details,
-                error: payload.status?payload.data.message:''
-            }
+         // case REGISTER:
+         //    console.log(payload)
+         //    return {
+         //        ...state,
+         //        register: payload.user_details,
+         //        error: payload.status?payload.data.message:''
+         //    }
         default:
             return state;
     }
